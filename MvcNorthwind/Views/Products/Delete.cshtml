@@ -1,0 +1,89 @@
+﻿@model MvcNorthwind.Models.Products
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Products</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ProductID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProductID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ProductName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ProductName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Suppliers.CompanyName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Suppliers.CompanyName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Categories.CategoryName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Categories.CategoryName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.QuantityPerUnit)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.QuantityPerUnit)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UnitPrice)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UnitPrice)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UnitsInStock)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UnitsInStock)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UnitsOnOrder)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UnitsOnOrder)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ReorderLevel)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ReorderLevel)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Discontinued)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Discontinued)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
